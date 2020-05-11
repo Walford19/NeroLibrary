@@ -17,18 +17,13 @@ namespace Nero.Sample
             game.VSync = false;
             game.OnInitialize = Initialize;
             game.OnResources = Resource.Initialize;
-            game.OnDraw = Draw;
+            Game.SetScene(new Scenes.Main());
             game.Run();            
         }
 
         static void Initialize()
         {
             Game.FPS_visible = true;
-        }
-
-        static void Draw(RenderTarget target)
-        {
-            Renderer.DrawText(target, "Porra", 24, new Vector2(20.5f, 100), Color.White);
         }
     }
 }

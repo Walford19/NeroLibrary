@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Resource.cs" />
+    <Compile Include="Scenes\Components\fTeste.cs" />
+    <Compile Include="Scenes\Main.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

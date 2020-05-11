@@ -18,12 +18,14 @@ namespace Nero
         public static bool FPS_visible = true;
         public static int FPS = 0;
         public static float DeltaTime;
+        public static Vector2 MousePosition;
+        static SceneBase scene = null;
+        static SceneBase nextscene = null;
 
         public string Title = "Nero Library Game";
         public bool VSync = false;
         public Action OnInitialize = delegate { };        
         public Action OnResources = delegate { };
-        public Action<RenderTarget> OnDraw = delegate { };
 
         RenderWindow Window;        
 
@@ -60,11 +62,17 @@ namespace Nero
                     // Delta Time
                     DeltaTime = clock.Restart().AsSeconds();
 
+                    // Atualiza a cena
+                    scene?.Update();
+
                     // Dispara os eventos da janela
                     Window.DispatchEvents();
 
                     Window.Clear(Color.CornflowerBlue);
-                    OnDraw.Invoke(Window);
+
+                    // Desenha a cena
+                    scene?.Draw(Window, RenderStates.Default);
+                    
                     if (FPS_visible)
                         Renderer.DrawText(Window, "FPS: " + FPS, 12, new Vector2(10, 10), Color.White, 1, new Color(0, 0, 0, 100));
 
@@ -120,33 +128,68 @@ namespace Nero
 
         private void Window_TextEntered(object sender, TextEventArgs e)
         {
-            
+            if (scene != null) scene.TextEntered(e);
         }
 
         private void Window_MouseWheelScrolled(object sender, MouseWheelScrollEventArgs e)
         {
-            
+            if (scene != null) scene.MouseScrolled(e);
         }
 
         private void Window_MouseMoved(object sender, MouseMoveEventArgs e)
         {
-            
+            MousePosition = new Vector2(e.X, e.Y);
+            if (scene != null) scene.MouseMoved(MousePosition);
         }
 
         private void Window_MouseButtonReleased(object sender, MouseButtonEventArgs e)
         {
-            
+            var m = new MouseButtonEvent();
+            m.Button = e.Button;
+            m.X = e.X;
+            m.Y = e.Y;
+            if (scene != null) scene.MouseReleased(m);
         }
 
         private void Window_MouseButtonPressed(object sender, MouseButtonEventArgs e)
         {
-            
+            var m = new MouseButtonEvent();
+            m.Button = e.Button;
+            m.X = e.X;
+            m.Y = e.Y;
+            if (scene != null) scene.MousePressed(m);
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
             Window.Close();
             Running = false;
+        }
+
+        public static void SetScene(SceneBase newScene)
+        {
+            if (scene != null && nextscene.FadeActive)
+            {
+                nextscene = newScene;
+                scene?.FadeOn();
+            }
+            else
+            {
+                scene = newScene;
+                scene.FadeOff();
+            }
+        }
+
+        public static T GetScene<T>() where T : SceneBase
+            => (T)scene;
+
+        internal static void NextScene()
+        {
+            if (nextscene != null && nextscene != scene)
+            {
+                scene = nextscene;
+                scene.FadeOff();
+            }
         }
     }
 }

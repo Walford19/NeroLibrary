@@ -94,5 +94,27 @@ namespace Nero
                     return largeTexture != null ? (Vector2)largeTexture.Size : Vector2.Zero;
             }
         }
+
+        /// <summary>
+        /// Redimensionamento suavel
+        /// </summary>
+        public bool Smooth
+        {
+            get
+            {
+                if (type == TextureTypes.Normal)
+                    return texture.Smooth;
+                else
+                    return largeTexture.Smooth;
+            }
+
+            set
+            {
+                if (type == TextureTypes.Normal)
+                    texture.Smooth = value;
+                else
+                    largeTexture.Smooth = value;
+            }
+        }
     }
 }

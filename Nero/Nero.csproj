@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>..\Build\Nero\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -44,13 +44,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Color.cs" />
+    <Compile Include="Control\Anchors.cs" />
+    <Compile Include="Control\Bond.cs" />
+    <Compile Include="Control\Button.cs" />
+    <Compile Include="Control\CheckBox.cs" />
+    <Compile Include="Control\CheckBoxAligns.cs" />
+    <Compile Include="Control\ComboBox.cs" />
+    <Compile Include="Control\Control.cs" />
+    <Compile Include="Control\Form.cs" />
+    <Compile Include="Control\FormDragged.cs" />
+    <Compile Include="Control\ListBox.cs" />
+    <Compile Include="Control\Panel.cs" />
+    <Compile Include="Control\TextAligns.cs" />
+    <Compile Include="Control\TextBox.cs" />
+    <Compile Include="Control\VScroll.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameObject.cs" />
     <Compile Include="LargeSprite.cs" />
     <Compile Include="LargeTexture.cs" />
     <Compile Include="MemoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Renderer.cs" />
+    <Compile Include="SceneBase.cs" />
     <Compile Include="SFML\Audio\Listener.cs" />
     <Compile Include="SFML\Audio\Music.cs" />
     <Compile Include="SFML\Audio\Sound.cs" />
@@ -108,6 +125,7 @@
     <Compile Include="SFML\Window\Window.cs" />
     <Compile Include="Texture.cs" />
     <Compile Include="TextureTypes.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="Vector2.cs" />
   </ItemGroup>
   <ItemGroup>

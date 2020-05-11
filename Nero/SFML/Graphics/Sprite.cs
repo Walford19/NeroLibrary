@@ -101,6 +101,8 @@ namespace Nero.SFML.Graphics
             set { sfSprite_setTextureRect(CPointer, value); }
         }
 
+
+
         ////////////////////////////////////////////////////////////
         /// <summary>
         /// Get the local bounding rectangle of the entity.
