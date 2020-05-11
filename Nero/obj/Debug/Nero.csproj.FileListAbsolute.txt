@@ -1,0 +1,16 @@
+E:\Projeto\Nero\Nero\bin\Debug\Nero.dll
+E:\Projeto\Nero\Nero\bin\Debug\Nero.pdb
+E:\Projeto\Nero\Nero\bin\Debug\SFML.Audio.dll
+E:\Projeto\Nero\Nero\bin\Debug\SFML.Graphics.dll
+E:\Projeto\Nero\Nero\bin\Debug\SFML.System.dll
+E:\Projeto\Nero\Nero\bin\Debug\SFML.Window.dll
+E:\Projeto\Nero\Nero\bin\Debug\SFML.Audio.xml
+E:\Projeto\Nero\Nero\bin\Debug\SFML.Graphics.xml
+E:\Projeto\Nero\Nero\bin\Debug\SFML.System.xml
+E:\Projeto\Nero\Nero\bin\Debug\SFML.Window.xml
+E:\Projeto\Nero\Nero\obj\Debug\Nero.csprojAssemblyReference.cache
+E:\Projeto\Nero\Nero\obj\Debug\Nero.csproj.CoreCompileInputs.cache
+E:\Projeto\Nero\Nero\obj\Debug\Nero.dll
+E:\Projeto\Nero\Nero\obj\Debug\Nero.pdb
+E:\Projeto\Nero\Build\Nero\Nero.dll
+E:\Projeto\Nero\Build\Nero\Nero.pdb
