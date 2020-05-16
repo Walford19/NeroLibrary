@@ -8,6 +8,8 @@ namespace Nero.Sample
 {
     static class Resource
     {
+        public static readonly string Path = AppDomain.CurrentDomain.BaseDirectory + "/res/";
+
         /// <summary>
         /// Inicializa os recursos
         /// </summary>

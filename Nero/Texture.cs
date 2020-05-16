@@ -27,55 +27,13 @@ namespace Nero
             if (large)
             {
                 type = TextureTypes.Large;
-                largeTexture = LoadLargeTexture(filename);
+                largeTexture = Loader.LoadLargeTexture(filename);
             }
             else
             {
                 type = TextureTypes.Normal;
-                texture = LoadTexture(filename);
+                texture = Loader.LoadNativeTexture(filename);
             }
-        }
-
-        /// <summary>
-        /// Carrega a textura grande
-        /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
-        LargeTexture LoadLargeTexture(string filename)
-        {
-            var fs = File.OpenRead(filename);
-            var r = new BinaryReader(fs);
-            int len = r.ReadInt32();
-            byte[] data = r.ReadBytes(len);
-            r.Close();
-            fs.Close();
-
-            data = MemoryService.Decompress(data);
-
-            var image = new Image(data);
-            var tex = new LargeTexture(image);
-            image.Dispose();
-
-            return tex;
-        }
-
-        /// <summary>
-        /// Carrega a textura normal
-        /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
-        NativeTexture LoadTexture(string filename)
-        {
-            var fs = File.OpenRead(filename);
-            var r = new BinaryReader(fs);
-            int len = r.ReadInt32();
-            byte[] data = r.ReadBytes(len);
-            r.Close();
-            fs.Close();
-
-            data = MemoryService.Decompress(data);
-
-            return new NativeTexture(data);
         }
 
         internal NativeTexture GetTexture() => texture;

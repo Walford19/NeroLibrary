@@ -2,9 +2,10 @@
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace Nero.SFML.Window
+namespace Nero
 {
-    using System;
+    using SFML.System;
+    using SFML.Window;
     ////////////////////////////////////////////////////////////
     /// <summary>
     /// Give access to the real-time state of the mouse
@@ -133,13 +134,13 @@ namespace Nero.SFML.Window
         }
 
         #region Imports
-        [DllImport(CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
+        [DllImport(SFML.CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
         static extern bool sfMouse_isButtonPressed(Button button);
 
-        [DllImport(CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
+        [DllImport(SFML.CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
         static extern Vector2i sfMouse_getPosition(IntPtr relativeTo);
 
-        [DllImport(CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
+        [DllImport(SFML.CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
         static extern void sfMouse_setPosition(Vector2i position, IntPtr relativeTo);
         #endregion
     }

@@ -35,7 +35,7 @@ namespace Nero
         {
             if (texture.type == TextureTypes.Normal)
             {
-                var scale = destination.size / texture.size;
+                var scale = destination.size / source.size;
 
                 _sprite.Texture = texture.GetTexture();
                 _sprite.Position = destination.position;
@@ -48,7 +48,7 @@ namespace Nero
             }
             else
             {
-                var scale = destination.size / texture.size;
+                var scale = destination.size / source.size;
 
                 _spritelarge.Texture = texture.GetLargeTexture();
                 _spritelarge.Position = destination.position;

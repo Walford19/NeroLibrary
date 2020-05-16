@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.IO.Compression;
-
+using System.Security.Cryptography;
+using System.Linq;
 
 namespace Nero
 {
-    public class MemoryService
+    public static class MemoryService
     {
         /// <summary>
         ///  Comprimi os bytes
@@ -27,6 +28,11 @@ namespace Nero
             return output.ToArray();
         }
 
+        /// <summary>
+        /// Descomprimi
+        /// </summary>
+        /// <param name="inputData"></param>
+        /// <returns></returns>
         public static byte[] Decompress(byte[] inputData)
         {
             if (inputData == null)
@@ -40,5 +46,6 @@ namespace Nero
             }
             return output.ToArray();
         }
+                     
     }
 }

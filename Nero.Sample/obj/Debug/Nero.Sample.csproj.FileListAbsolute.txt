@@ -19,3 +19,6 @@ E:\Projeto\Nero\Nero.Sample\bin\Debug\SFML.Audio.xml
 E:\Projeto\Nero\Build\Sample\Nero.Sample.exe.config
 E:\Projeto\Nero\Build\Sample\Nero.Sample.exe
 E:\Projeto\Nero\Build\Sample\Nero.Sample.pdb
+E:\Projeto\Nero\Build\Nero.Sample\Nero.Sample.exe.config
+E:\Projeto\Nero\Build\Nero.Sample\Nero.Sample.exe
+E:\Projeto\Nero\Build\Nero.Sample\Nero.Sample.pdb

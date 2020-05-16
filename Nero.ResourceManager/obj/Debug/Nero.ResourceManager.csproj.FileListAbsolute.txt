@@ -1,0 +1,16 @@
+E:\Projeto\Nero\Nero.ResourceManager\bin\Debug\Nero.ResourceManager.exe.config
+E:\Projeto\Nero\Nero.ResourceManager\bin\Debug\Nero.ResourceManager.exe
+E:\Projeto\Nero\Nero.ResourceManager\bin\Debug\Nero.ResourceManager.pdb
+E:\Projeto\Nero\Nero.ResourceManager\bin\Debug\Nero.dll
+E:\Projeto\Nero\Nero.ResourceManager\bin\Debug\Nero.pdb
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.csprojAssemblyReference.cache
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.MainForm.resources
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.Properties.Resources.resources
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.csproj.GenerateResource.cache
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.csproj.CoreCompileInputs.cache
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.csproj.CopyComplete
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.exe
+E:\Projeto\Nero\Nero.ResourceManager\obj\Debug\Nero.ResourceManager.pdb
+E:\Projeto\Nero\Build\Nero.ResourceManager\Nero.ResourceManager.exe.config
+E:\Projeto\Nero\Build\Nero.ResourceManager\Nero.ResourceManager.exe
+E:\Projeto\Nero\Build\Nero.ResourceManager\Nero.ResourceManager.pdb

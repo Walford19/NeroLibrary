@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace Nero.SFML.Window
+namespace Nero
 {
     ////////////////////////////////////////////////////////////
     /// <summary>
@@ -269,10 +269,10 @@ namespace Nero.SFML.Window
         }
 
         #region Imports
-        [DllImport(CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
+        [DllImport(SFML.CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
         static extern bool sfKeyboard_isKeyPressed(Key Key);
 
-        [DllImport(CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
+        [DllImport(SFML.CSFML.window, CallingConvention = CallingConvention.Cdecl), SuppressUnmanagedCodeSecurity]
         static extern void sfKeyboard_setVirtualKeyboardVisible(bool visible);
         #endregion
     }
